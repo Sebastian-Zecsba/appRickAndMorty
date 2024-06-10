@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import useApi from "../hooks/useApi"
 
-const CharacterCard = ({character, key}) => {
+const CharacterCard = ({character}) => {
 
     const [getCharacter, dataCharacter] = useApi()
 
@@ -20,7 +20,7 @@ const CharacterCard = ({character, key}) => {
     }
 
     return (
-        <div className="character_box" key={key} >
+        <div className="character_box">
             <div className="character_status_box">
                 <div className={circleClass}></div>
                 <p>{dataCharacter?.status}</p>

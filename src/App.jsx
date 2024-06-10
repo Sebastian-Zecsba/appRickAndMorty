@@ -34,7 +34,7 @@ function App() {
   };
 
   const currentCharacters = pagination();
-  console.log(dataLocation)
+
   return (
     <>
       <header className="app_header">
@@ -57,8 +57,8 @@ function App() {
             {currentCharacters?.length === 0 ?  
               <h1>No se encontro ningun habitante para este planeta</h1>
             : 
-            currentCharacters?.map((character) => (
-              <CharacterCard key={character.id} character={character} />
+            currentCharacters?.map((character, index) => (
+              <CharacterCard character={character} key={index}/>
             ))
             }
           </div>
